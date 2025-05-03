@@ -171,7 +171,7 @@ export function HeroSection() {
                   </span>
                 </div>
                 <div className="p-6 font-mono text-base min-h-[180px]">
-                  <div className="text-foreground whitespace-pre-wrap">
+                  <div className="font-mono text-sm text-muted-foreground whitespace-pre-wrap">
                     {terminalText}
                     {showBlinkingCursor && (
                       <span className="animate-pulse">_</span>
