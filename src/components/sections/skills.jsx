@@ -86,7 +86,9 @@ export function SkillsSection() {
                     <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                       <category.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-lg">{category.title}</h3>
+                    <h3 className="font-semibold text-lg text-primary">
+                      {category.title}
+                    </h3>
                   </div>
 
                   <div className="space-y-4">
