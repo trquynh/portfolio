@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Code, Globe, Heart, Rocket, Sparkles } from "lucide-react";
-import Image from "next/image";
 
 export function AboutSection() {
   const features = [

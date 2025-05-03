@@ -11,8 +11,7 @@ import { EducationSection } from "@/components/sections/educations";
 import { ContactSection } from "@/components/sections/contact";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { MouseTrackingGlow } from "@/components/ui/mouse-tracking-glow";
-import { MouseTrackingBackground } from "@/components/ui/mouse-tracking-background";
+import { SpotlightEffect } from "@/components/ui/mouse-tracking-background";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -26,11 +25,10 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <MouseTrackingBackground />
-      <MouseTrackingGlow />
+    <div className="relative min-h-screen bg-background text-foreground">
+      <SpotlightEffect />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

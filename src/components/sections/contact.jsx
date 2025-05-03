@@ -44,7 +44,7 @@ export function ContactSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          <div className="space-y-6">
+          <div className="space-y-6 px-4 sm:px-6 md:px-8">
             {contactInfo.map((item, index) => (
               <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
@@ -69,7 +69,7 @@ export function ContactSection() {
             ))}
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 px-4 sm:px-6 md:px-8">
             <Card className="bg-primary/5">
               <CardContent className="p-6 space-y-6">
                 <h3 className="text-xl font-semibold">
