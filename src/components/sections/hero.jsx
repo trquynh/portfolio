@@ -50,7 +50,7 @@ export function HeroSection() {
           });
 
           currentCharIndexRef.current++;
-          timeoutId = setTimeout(typeCommand, 40);
+          timeoutId = setTimeout(typeCommand, 35);
         } else {
           if (currentCommand.type === "output") {
             setTerminalText((prev) => prev + "\n");

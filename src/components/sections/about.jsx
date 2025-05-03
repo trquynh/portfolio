@@ -1,5 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, Code, Globe, Heart, Rocket, Sparkles } from "lucide-react";
+import {
+  BookOpen,
+  Code,
+  Globe,
+  Heart,
+  Rocket,
+  Sparkles,
+  Terminal,
+  Zap,
+  Coffee,
+  Brain,
+} from "lucide-react";
 
 export function AboutSection() {
   const features = [
@@ -30,9 +41,39 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary/5">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background with grid pattern - matching hero section */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      </div>
+
+      {/* Floating code blocks - subtle version for about section */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-10 left-5 transform -rotate-6">
+          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
+            {`const person = {
+  passion: 'technology',
+  goal: 'grow and learn'
+}`}
+          </pre>
+        </div>
+        <div className="absolute bottom-10 right-5 transform rotate-6">
+          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
+            {`if (challenge) {
+  findSolution();
+}`}
+          </pre>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
+          {/* Title with similar styling to hero section */}
+          <div className="flex items-center gap-2 text-primary justify-center mb-8">
+            <Terminal className="w-6 h-6" />
+            <span className="font-mono">/about-me</span>
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Über mich
           </h2>
@@ -40,24 +81,55 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-4">
               <p className="text-lg leading-relaxed">
-                Hallo! Ich bin Truc Quynh Nguyen, Informatikstudentin an der
-                Hochschule Darmstadt. Meine Reise begann in Vietnam, bevor ich
-                nach Deutschland kam, um hier meine Träume zu verfolgen.
+                <span className="text-primary font-semibold">
+                  Hey! Ich bin Quynh
+                </span>
+                , Informatikstudentin an der Hochschule Darmstadt. Von Vietnam
+                nach Deutschland – für meine Träume habe ich{" "}
+                <span className="text-primary">mutig den Sprung gewagt</span>.
               </p>
               <p className="text-lg leading-relaxed">
-                Dieser Schritt erforderte Mut und Anpassungsfähigkeit, war aber
-                eine der wertvollsten Erfahrungen meines Lebens. Heute bin ich
-                auf der Suche nach einem Praktikum ab Februar 2025, um meine
-                bisherigen Kenntnisse in einem professionellen Umfeld weiter
-                auszubauen.
+                Was es brauchte?{" "}
+                <span className="text-primary font-semibold">Mut, Neugier</span>{" "}
+                und eine große Portion Lernbereitschaft. Doch jede
+                Herausforderung hat mich{" "}
+                <span className="text-primary font-semibold">
+                  stärker gemacht
+                </span>
+                . Heute sind diese Erfahrungen mein Fundament – sowohl im Alltag
+                als auch in der Softwareentwicklung.
               </p>
             </div>
             <div className="space-y-4">
               <p className="text-lg leading-relaxed">
-                Besonders fasziniert mich die Webentwicklung, von React und
-                Next.js bis hin zu Backend-Technologien wie Node.js und
-                PostgreSQL. In meiner Freizeit arbeite ich an persönlichen
-                Projekten und lerne kontinuierlich neue Technologien.
+                <span className="text-primary font-semibold">
+                  Meine Mission
+                </span>
+                ? Eine leidenschaftliche{" "}
+                <span className="font-mono bg-primary/10 px-2 py-1 rounded">
+                  Developer
+                </span>{" "}
+                zu werden, die echte Probleme{" "}
+                <span className="text-primary">kreativ löst</span>. Vom ersten{" "}
+                <span className="font-mono bg-primary/10 px-2 py-1 rounded">
+                  &lt;click&gt;
+                </span>{" "}
+                bis zur Logik dahinter – ich liebe es, Code zu schreiben, der{" "}
+                <span className="text-primary font-semibold">Sinn stiftet</span>
+                .
+              </p>
+              <p className="text-lg leading-relaxed">
+                <span className="text-primary font-semibold">Nebenbei</span>?
+                Ich{" "}
+                <span className="text-primary font-semibold">
+                  experimentiere
+                </span>{" "}
+                mit neuen Ideen, arbeite an Projekten und entdecke jeden Tag
+                mehr von dem, wer ich als{" "}
+                <span className="font-mono bg-primary/10 px-2 py-1 rounded">
+                  Entwicklerin
+                </span>{" "}
+                sein möchte.
               </p>
             </div>
           </div>
@@ -66,7 +138,7 @@ export function AboutSection() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg transition-shadow duration-300"
+                className="group hover:shadow-lg transition-shadow duration-300 border bg-card"
               >
                 <CardContent className="p-6">
                   <feature.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
@@ -82,6 +154,10 @@ export function AboutSection() {
           </div>
         </div>
       </div>
+
+      {/* Animated background elements - matching hero section */}
+      <div className="absolute -top-64 -left-64 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob" />
+      <div className="absolute -bottom-64 -right-64 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-blob animation-delay-2000" />
     </section>
   );
 }
