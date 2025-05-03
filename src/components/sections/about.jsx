@@ -124,12 +124,12 @@ export function AboutSection() {
                 <span className="text-primary font-semibold">
                   experimentiere
                 </span>{" "}
-                mit neuen Ideen, arbeite an Projekten und entdecke jeden Tag
-                mehr von dem, wer ich als{" "}
+                mit neuen Ideen, arbeite an Projekten und wachse Schritt für
+                Schritt in meine Rolle als{" "}
                 <span className="font-mono bg-primary/10 px-2 py-1 rounded">
                   Entwicklerin
                 </span>{" "}
-                sein möchte.
+                hinein.
               </p>
             </div>
           </div>
