@@ -24,18 +24,32 @@ export function ContactSection() {
   });
 
   // Simulate sending a message
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setTyping(true);
-    setTimeout(() => {
-      setTyping(false);
-      setMessageSent(true);
-      // Reset after 3 seconds
-      setTimeout(() => {
-        setMessageSent(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setMessageSent(true);
         setFormData({ name: "", email: "", message: "" });
-      }, 3000);
-    }, 1500);
+
+        setTimeout(() => setMessageSent(false), 3000);
+      } else {
+        console.error("Fehler beim Senden.");
+      }
+    } catch (error) {
+      console.error("Verbindungsfehler:", error);
+    } finally {
+      setTyping(false);
+    }
   };
 
   const handleChange = (e) => {

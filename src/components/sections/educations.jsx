@@ -53,7 +53,7 @@ export function EducationSection() {
       degree: "Rechtswissenschaften",
       school: "Universität Ho-Chi-Minh-Stadt",
       location: "Ho-Chi-Minh-Stadt, Vietnam",
-      period: "2016-2018",
+      period: "2018-2019",
       description:
         "Grundlegende Kenntnisse in Zivilrecht, Verfassungsrecht und Rechtsmethodik",
       highlights: ["Analytisches Denken", "Präzises Argumentieren"],

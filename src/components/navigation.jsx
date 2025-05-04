@@ -102,13 +102,15 @@ export function Navigation() {
                     {item.label}
                   </a>
                 ))}
-                <Button
-                  size="sm"
-                  className="mt-3 flex items-center justify-center gap-1 group"
-                >
-                  <span>CV herunterladen</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </Button>
+                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="sm"
+                    className="mt-3 flex items-center justify-center gap-1 group"
+                  >
+                    <span>CV herunterladen</span>
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
