@@ -23,7 +23,7 @@ export function ProjectsSection() {
     {
       title: "Portfolio Website",
       description:
-        "Meine persönliche Portfolio-Website mit React.js, Next.js und Tailwind CSS, die meine Projekte, Fähigkeiten und meinen Bildungsweg präsentiert.",
+        "Meine persönliche Portfolio-Website mit React.js, Next.js und Tailwind CSS.",
       icon: Code,
       image: "/portfolio-seite.png",
       tech: [
@@ -35,7 +35,7 @@ export function ProjectsSection() {
       ],
       features: [
         "Responsives Design für alle Geräte",
-        "Dunkelmodus-Unterstützung",
+        "Dark/Lightmodus-Unterstützung",
         "Moderne UI mit interaktiven Elementen",
         "SEO-optimierte Struktur",
         "Einfach erweiterbare Komponenten-Architektur",
@@ -71,7 +71,7 @@ export function ProjectsSection() {
     {
       title: "LEGO Smart Train mit Raspberry Pi",
       description:
-        "Intelligentes Zugmodell mit Pi-Kamera und Sensorintegration. Inklusive Echtzeitbildverarbeitung und Datenauswertung.",
+        "Intelligentes Zugmodell mit Pi-Kamera und Sensorintegration.",
       icon: TrainFront,
       image: "/smart-train.jpg",
       tech: ["Python", "Raspberry Pi", "Computer Vision", "Sensorik"],
@@ -123,6 +123,7 @@ export function ProjectsSection() {
         "Suchmaschinenoptimierung (SEO)",
         "Performance-Optimierung",
       ],
+      github: null,
       liveSeite: "https://meisterbetrieb-asmussen.de/",
     },
   ];
@@ -254,43 +255,35 @@ export function ProjectsSection() {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 pt-2">
-                    <Button
-                      size="sm"
-                      className={`flex-1 group transition-all duration-500 ${
-                        hoveredIndex === index
-                          ? "bg-primary text-primary-foreground shadow-md"
-                          : "bg-primary/80"
-                      }`}
-                    >
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 w-full justify-center"
-                      >
-                        <Github
-                          className={`w-4 h-4 transition-transform duration-300 ${
-                            hoveredIndex === index ? "scale-110" : ""
-                          }`}
-                        />
-                        GitHub
-                      </a>
-                    </Button>
+                  <div className="flex gap-3">
+                    {project.github && (
+                      <Button asChild size="sm" className="flex-1">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          <Github className="w-4 h-4" />
+                          GitHub
+                        </a>
+                      </Button>
+                    )}
                     {project.liveSeite && (
                       <Button
+                        asChild
                         size="sm"
-                        variant="outline"
-                        className="flex-1 group border-primary/20 hover:border-primary/50"
+                        variant={project.github ? "outline" : "default"}
+                        className="flex-1"
                       >
                         <a
                           href={project.liveSeite}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 w-full justify-center"
+                          className="flex items-center gap-2"
                         >
-                          <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                          Kundenseite
+                          <ExternalLink className="w-4 h-4" />
+                          Live Seite
                         </a>
                       </Button>
                     )}

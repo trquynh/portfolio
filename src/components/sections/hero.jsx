@@ -79,13 +79,10 @@ export function HeroSection() {
   }, [currentCommandIndex]);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-    >
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background with grid pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
       {/* Floating code blocks in background */}
@@ -94,8 +91,6 @@ export function HeroSection() {
           <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
             {`function mission() {
   return 'Grow, build, and make a difference';
-}
-'
   }`}
           </pre>
         </div>
