@@ -12,6 +12,7 @@ import { ContactSection } from "@/components/sections/contact";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { SpotlightEffect } from "@/components/ui/mouse-tracking-background";
+import { GallerySection } from "@/components/sections/gallery";
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 
