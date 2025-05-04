@@ -120,7 +120,7 @@ export function SkillsSection() {
 
       {/* Floating code blocks and background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-10 opacity-20 transform -rotate-6">
+        <div className="absolute top-20 left-10 opacity-20 transform -rotate-6">
           <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
             {`const skills = {
   improve: () => true,

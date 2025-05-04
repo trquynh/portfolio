@@ -65,10 +65,12 @@ export function Navigation() {
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <Button size="sm" className="flex items-center gap-1 group">
-              <span>CV</span>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-            </Button>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="flex items-center gap-1 group">
+                <span>CV</span>
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
 

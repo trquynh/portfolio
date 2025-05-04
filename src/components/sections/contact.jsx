@@ -285,13 +285,15 @@ export function ContactSection() {
                       </p>
                     </div>
                   </div>
-                  <Button
-                    className="w-full mt-4 bg-primary hover:bg-primary/90 transition-colors"
-                    size="lg"
-                  >
-                    <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                    CV Download
-                  </Button>
+                  <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      className="w-full mt-4 bg-primary hover:bg-primary/90 transition-colors"
+                      size="lg"
+                    >
+                      <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                      CV Download
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

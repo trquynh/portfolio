@@ -12,7 +12,6 @@ import { ContactSection } from "@/components/sections/contact";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { SpotlightEffect } from "@/components/ui/mouse-tracking-background";
-
 export default function Home() {
   const [mounted, setMounted] = useState(false);
 

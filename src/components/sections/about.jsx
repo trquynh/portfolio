@@ -50,7 +50,7 @@ export function AboutSection() {
       {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-20 left-10 transform -rotate-6">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
+          <pre className="bg-black/5 p-3 rounded-lg font-mono text-sm">
             {`const person = {
   passion: 'technology',
   goal: 'grow and learn'
@@ -58,7 +58,7 @@ export function AboutSection() {
           </pre>
         </div>
         <div className="absolute bottom-10 right-5 transform rotate-6">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
+          <pre className="bg-black/5 p-3 rounded-lg font-mono text-sm">
             {`if (challenge) {
   findSolution();
 }`}
@@ -107,16 +107,14 @@ export function AboutSection() {
                 </span>
                 ? Eine leidenschaftliche{" "}
                 <span className="font-mono bg-primary/10 px-2 py-1 rounded">
-                  Developer
+                  Entwicklerin
                 </span>{" "}
                 zu werden, die echte Probleme{" "}
                 <span className="text-primary">kreativ löst</span>. Vom ersten{" "}
                 <span className="font-mono bg-primary/10 px-2 py-1 rounded">
                   &lt;click&gt;
                 </span>{" "}
-                bis zur Logik dahinter – ich liebe es, Code zu schreiben, der{" "}
-                <span className="text-primary font-semibold">Sinn stiftet</span>
-                .
+                bis zur Logik dahinter.
               </p>
               <p className="text-lg leading-relaxed">
                 <span className="text-primary font-semibold">Nebenbei</span>?
