@@ -130,13 +130,11 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="pt-32 pb-20 relative overflow-hidden">
       {/* Background with grid pattern - OHNE Farbübergang */}
-      <div className="absolute inset-0 bg-black/90">
-        {" "}
-        {/* Hier einfache schwarze Hintergrundfarbe */}
+      <div className="absolute inset-0 bg-gradient-to-br">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
-      {/* Floating code blocks */}
+      {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-40 left-10 transform -rotate-12">
           <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">

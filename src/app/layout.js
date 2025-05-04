@@ -1,3 +1,4 @@
+// src/app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="relative bg-background border-t">
       {/* Back to top button */}
-      <div className="absolute left-1/2 -translate-x-1/2 -top-5">
+      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-30">
         <a
           href="#home"
           className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors"
