@@ -43,21 +43,21 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Background with grid pattern - matching hero section */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
+      <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
       {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-20 left-10 transform -rotate-6">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-sm">
+        <div className="absolute top-20 lg:left-20 md:left-10 transform -rotate-6 hidden sm:block">
+          <pre className="bg-black/5 p-2 md:p-3 rounded-lg font-mono text-[8px] xs:text-[10px] sm:text-xs md:text-sm">
             {`const person = {
   passion: 'technology',
   goal: 'grow and learn'
 }`}
           </pre>
         </div>
-        <div className="absolute bottom-10 right-5 transform rotate-6">
+        <div className="absolute bottom-10 right-5 transform rotate-6 hidden sm:block">
           <pre className="bg-black/5 p-3 rounded-lg font-mono text-sm">
             {`if (challenge) {
   findSolution();
@@ -154,8 +154,6 @@ export function AboutSection() {
       </div>
 
       {/* Animated background elements - matching hero section */}
-      <div className="absolute -top-64 -left-64 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob" />
-      <div className="absolute -bottom-64 -right-64 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-blob animation-delay-2000" />
     </section>
   );
 }

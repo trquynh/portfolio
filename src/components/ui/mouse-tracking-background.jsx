@@ -5,36 +5,47 @@ import { useTheme } from "next-themes";
 
 export function SpotlightEffect() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
-    const checkIfTouchDevice = () => {
-      setIsTouchDevice(
+    // More comprehensive check for mobile devices
+    const checkIfMobile = () => {
+      // Check for touch capability
+      const hasTouchCapability =
         "ontouchstart" in window ||
-          navigator.maxTouchPoints > 0 ||
-          navigator.msMaxTouchPoints > 0
-      );
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
+
+      // Check for mobile user agent (additional check)
+      const mobileUserAgent =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+
+      // Consider it mobile if either condition is true
+      return hasTouchCapability || mobileUserAgent;
     };
 
-    checkIfTouchDevice();
+    // Set the mobile state
+    setIsMobile(checkIfMobile());
 
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    // Only set up mouse tracking for non-mobile devices
+    if (!checkIfMobile()) {
+      const handleMouseMove = (e) => {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+      };
 
-    if (!isTouchDevice) {
       window.addEventListener("mousemove", handleMouseMove);
-    }
 
-    return () => {
-      if (!isTouchDevice) {
+      return () => {
         window.removeEventListener("mousemove", handleMouseMove);
-      }
-    };
-  }, [isTouchDevice]);
+      };
+    }
+  }, []);
 
-  if (isTouchDevice) {
+  // If it's a mobile device, don't render anything
+  if (isMobile) {
     return null;
   }
 
@@ -42,6 +53,7 @@ export function SpotlightEffect() {
 
   return (
     <>
+      {/* Main Spotlight Effect */}
       <div
         className="fixed inset-0 pointer-events-none z-30 transition-opacity duration-300"
         style={{
@@ -55,6 +67,7 @@ export function SpotlightEffect() {
         }}
       />
 
+      {/* Core Glow Effect */}
       <div
         className="fixed inset-0 pointer-events-none z-40"
         style={{
@@ -69,6 +82,7 @@ export function SpotlightEffect() {
         }}
       />
 
+      {/* Subtle accent in dark mode */}
       {!isLight && (
         <div
           className="fixed inset-0 pointer-events-none z-20 transition-opacity duration-300"

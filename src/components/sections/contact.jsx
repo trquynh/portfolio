@@ -96,8 +96,8 @@ export function ContactSection() {
 
       {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-40 left-20 transform -rotate-12">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
+        <div className="absolute lg:top-20 sm:top-10 md:top-30 right-4 sm:right-10 md:right-2 lg:right-40 transform rotate-12 max-w-[160px] sm:max-w-none">
+          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
             {`const contact = () => {
   return new Connection({
     status: 'open',
@@ -106,7 +106,7 @@ export function ContactSection() {
 }`}
           </pre>
         </div>
-        <div className="absolute bottom-5 left-10 transform -rotate-3">
+        <div className="absolute bottom-5 left-10 transform -rotate-3 hidden sm:block">
           <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
             {`function sendMessage(text) {
   if(text.length > 0) {
@@ -316,7 +316,6 @@ export function ContactSection() {
       </div>
 
       {/* Animated background elements - matching other sections */}
-      <div className="absolute -top-64 -right-64 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob" />
       <div className="absolute -bottom-64 -left-64 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-blob animation-delay-2000" />
     </section>
   );

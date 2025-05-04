@@ -136,15 +136,26 @@ export function ProjectsSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
-      {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-40 left-10 transform -rotate-12">
-          <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
+        <div className="absolute top-8 sm:top-14 md:top-14 left-2 sm:left-6 md:left-10 transform -rotate-12 max-w-[180px] sm:max-w-none">
+          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
             {`class Project {
   constructor(vision) {
     this.code = translate(vision);
     this.impact = deliver(this.code);
   }
+}`}
+          </pre>
+        </div>
+        <div className="hidden lg:block absolute top-2/3 right-20 transform translate-y-1/4 rotate-6">
+          <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
+            {`// I build things that work.
+const project = {
+  idea: 'real',
+  code: 'clean',
+  ui: 'sharp',
+  logic: 'solid',
+  result: 'shipped'
 }`}
           </pre>
         </div>
@@ -297,9 +308,9 @@ export function ProjectsSection() {
       </div>
 
       {/* Animated background elements - matching other sections */}
-      <div className="absolute -top-64 -right-64 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-blob" />
+      <div className="absolute -top-64 -left-64 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob" />
       <div className="absolute -bottom-64 -left-64 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-blob animation-delay-2000" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob animation-delay-4000" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob animation-delay 4000" />
     </section>
   );
 }

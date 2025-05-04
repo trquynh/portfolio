@@ -72,20 +72,14 @@ export function EducationSection() {
       <div className="absolute inset-0 bg-gradient-to-br">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
-
-      {/* Floating code blocks - subtle version for about section */}
+      {/* Floating code blocks - shorter version for education section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-40 right-20 transform -rotate-12">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
-            {`class Knowledge {
-    constructor() {
-      this.curiosity = Infinity;
-    }
-    
-    learn(topic) {
-      return this.grow();
-    }
-  }`}
+        <div className="absolute lg:top-20 sm:top-10 md:top-30 left-4 sm:left-10 md:left-2 lg:left-40 transform -rotate-12 max-w-[160px] sm:max-w-none">
+          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
+            {`function learn(subject) {
+  knowledge++;
+  return growth;
+}`}
           </pre>
         </div>
       </div>
@@ -180,10 +174,6 @@ export function EducationSection() {
           </div>
         </div>
       </div>
-
-      {/* Animated background elements */}
-      <div className="absolute -top-64 -right-64 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-blob" />
-      <div className="absolute -bottom-64 -left-64 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-blob animation-delay-2000" />
     </section>
   );
 }

@@ -120,8 +120,8 @@ export function SkillsSection() {
 
       {/* Floating code blocks and background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 opacity-20 transform -rotate-6">
-          <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
+        <div className="absolute lg:top-20 sm:top-14 md:top-4 left-2 sm:left-6 md:left-10 opacity-15 transform -rotate-6 max-w-[160px] sm:max-w-none">
+          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[12px] xs:text-[10px] sm:text-xs md:text-sm">
             {`const skills = {
   improve: () => true,
   learn: (newTech) => skills.add(newTech),
@@ -234,8 +234,6 @@ export function SkillsSection() {
           </div>
         </div>
       </div>
-
-      {/* CSS for animation */}
     </section>
   );
 }
