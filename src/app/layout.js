@@ -9,6 +9,9 @@ export const metadata = {
   title: "Truc Quynh Nguyen - Portfolio",
   description:
     "Portfolio von Truc Quynh Nguyen - Informatikstudentin mit Fokus auf Full-Stack-Entwicklung",
+  icons: {
+    icon: { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+  },
 };
 
 export default function RootLayout({ children }) {
