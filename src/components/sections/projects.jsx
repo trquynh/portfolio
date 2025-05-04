@@ -106,7 +106,7 @@ export function ProjectsSection() {
     {
       title: "Business Website mit WordPress",
       description:
-        "Entwicklung und Anpassung einer Unternehmenswebsite mit WordPress, inklusive maßgeschneiderten Themes und Funktionen für verbesserte Benutzererfahrung.",
+        "Entwicklung und Anpassung einer Unternehmenswebsite mit WordPress.",
       icon: Globe, // Importiere Globe von lucide-react
       image: "/wordpress-seite.png", // Bild deiner WordPress-Seite
       tech: [
