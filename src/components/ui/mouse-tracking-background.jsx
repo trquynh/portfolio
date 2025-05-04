@@ -5,22 +5,43 @@ import { useTheme } from "next-themes";
 
 export function SpotlightEffect() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
+    const checkIfTouchDevice = () => {
+      setIsTouchDevice(
+        "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0 ||
+          navigator.msMaxTouchPoints > 0
+      );
+    };
+
+    checkIfTouchDevice();
+
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    if (!isTouchDevice) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
+
+    return () => {
+      if (!isTouchDevice) {
+        window.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, [isTouchDevice]);
+
+  if (isTouchDevice) {
+    return null;
+  }
 
   const isLight = theme === "light";
 
   return (
     <>
-      {/* Main Spotlight Effect */}
       <div
         className="fixed inset-0 pointer-events-none z-30 transition-opacity duration-300"
         style={{
@@ -34,7 +55,6 @@ export function SpotlightEffect() {
         }}
       />
 
-      {/* Core Glow Effect */}
       <div
         className="fixed inset-0 pointer-events-none z-40"
         style={{
@@ -49,7 +69,6 @@ export function SpotlightEffect() {
         }}
       />
 
-      {/* Subtle accent in dark mode */}
       {!isLight && (
         <div
           className="fixed inset-0 pointer-events-none z-20 transition-opacity duration-300"
