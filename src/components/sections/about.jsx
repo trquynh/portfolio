@@ -49,7 +49,7 @@ export function AboutSection() {
 
       {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-10 left-10 transform -rotate-6">
+        <div className="absolute top-20 left-10 transform -rotate-6">
           <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
             {`const person = {
   passion: 'technology',

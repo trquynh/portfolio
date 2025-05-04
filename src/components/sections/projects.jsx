@@ -123,7 +123,6 @@ export function ProjectsSection() {
         "Suchmaschinenoptimierung (SEO)",
         "Performance-Optimierung",
       ],
-      github: null, // Falls du keinen GitHub-Link hast
       liveSeite: "https://meisterbetrieb-asmussen.de/",
     },
   ];
