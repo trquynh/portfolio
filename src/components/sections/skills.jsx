@@ -113,10 +113,10 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-20 relative overflow-hidden bg-gradient-to-br from-background to-background/90"
+      className="pt-32 py-20 relative overflow-hidden bg-gradient-to-br from-background to-background/90"
     >
       {/* Background grid pattern like in hero section */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808030,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Floating code blocks and background elements */}
       <div className="absolute inset-0 pointer-events-none">

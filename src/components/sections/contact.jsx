@@ -74,15 +74,17 @@ export function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background with grid pattern - matching other sections */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
+    <section id="contact" className="pt-32 pb-20 relative overflow-hidden">
+      {/* Background with grid pattern - OHNE Farbübergang */}
+      <div className="absolute inset-0 bg-black/90">
+        {" "}
+        {/* Hier einfache schwarze Hintergrundfarbe */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
       {/* Floating code blocks */}
-      <div className="absolute inset-0 pointer-events-none opacity-15">
-        <div className="absolute top-20 right-10 transform rotate-6">
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-40 left-20 transform -rotate-12">
           <pre className="bg-black/5 p-3 rounded-lg font-mono text-xs">
             {`const contact = () => {
   return new Connection({

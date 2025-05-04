@@ -1,10 +1,25 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Menu, X, ChevronRight, Code, Terminal } from "lucide-react";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Listen for scroll events to change header appearance
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "#home", label: "Home" },
@@ -16,27 +31,45 @@ export function Navigation() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b">
-      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/90 backdrop-blur-md border-b shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="container mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo Area */}
         <div className="flex items-center">
-          <a href="#home" className="text-xl font-bold">
-            TQN
+          <a href="#home" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <Code className="w-5 h-5 text-primary" />
+            </div>
+            <span className="font-semibold text-xl">TQN</span>
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-          <ThemeToggle />
-          <Button size="sm">CV herunterladen</Button>
+        <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center space-x-1">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors rounded-full hover:bg-primary/5"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button size="sm" className="flex items-center gap-1 group">
+              <span>CV</span>
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -46,6 +79,7 @@ export function Navigation() {
             variant="ghost"
             size="icon"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="rounded-full"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
@@ -53,21 +87,27 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden">
-            <div className="container mx-auto px-4 py-4 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="block text-sm font-medium hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+          <div className="absolute inset-x-0 top-20 p-4 bg-background border-b md:hidden">
+            <div className="rounded-xl bg-muted/50 p-2">
+              <div className="flex flex-col space-y-1 p-2">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="px-4 py-3 rounded-lg hover:bg-background transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <Button
+                  size="sm"
+                  className="mt-3 flex items-center justify-center gap-1 group"
                 >
-                  {item.label}
-                </a>
-              ))}
-              <Button size="sm" className="w-full">
-                CV herunterladen
-              </Button>
+                  <span>CV herunterladen</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </Button>
+              </div>
             </div>
           </div>
         )}
