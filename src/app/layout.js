@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Portfolio von Truc Quynh Nguyen - Informatikstudentin mit Fokus auf Full-Stack-Entwicklung",
   icons: {
-    icon: { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+    icon: "/favicon.png",
   },
 };
 
