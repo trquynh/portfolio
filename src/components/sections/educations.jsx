@@ -27,7 +27,7 @@ export function EducationSection() {
       period: "2021 - Heute",
       description:
         "Fundierte Kenntnisse in objektorientierter Programmierung und Softwareentwicklung",
-      highlights: ["Aktueller Notenschnitt: 1,9"],
+      highlights: ["Aktueller Notenschnitt: 2,0"],
       modules: [
         "Webbasierte Anwendungen",
         "Datenbanken + Data Warehouse Technology",
@@ -43,9 +43,9 @@ export function EducationSection() {
       degree: "Studienkolleg",
       school: "Goethe-Institut Frankfurt am Main",
       location: "Frankfurt, Deutschland",
-      period: "2019 - 2020",
+      period: "2020 - 2021",
       description: "Vorbereitung auf ein technisches Studium in Deutschland",
-      highlights: ["Erfolgreich abgeschlossen mit Note 1,8"],
+      highlights: ["Erfolgreich abgeschlossen mit Note 1,7"],
       modules: ["Deutsch", "Mathematik", "Physik", "Informatik"],
     },
     {
@@ -53,7 +53,7 @@ export function EducationSection() {
       degree: "Rechtswissenschaften",
       school: "Universität Ho-Chi-Minh-Stadt",
       location: "Ho-Chi-Minh-Stadt, Vietnam",
-      period: "2018-2019",
+      period: "2019-2020",
       description:
         "Grundlegende Kenntnisse in Zivilrecht, Verfassungsrecht und Rechtsmethodik",
       highlights: ["Analytisches Denken", "Präzises Argumentieren"],
