@@ -138,7 +138,7 @@ export function ProjectsSection() {
 
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-8 sm:top-14 md:top-14 left-2 sm:left-6 md:left-10 transform -rotate-12 max-w-[180px] sm:max-w-none">
-          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
+          <pre className="p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
             {`class Project {
   constructor(vision) {
     this.code = translate(vision);
@@ -148,7 +148,7 @@ export function ProjectsSection() {
           </pre>
         </div>
         <div className="hidden lg:block absolute top-2/3 right-20 transform translate-y-1/4 rotate-6">
-          <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
+          <pre className="p-4 rounded-lg font-mono text-sm">
             {`// I build things that work.
 const project = {
   idea: 'real',

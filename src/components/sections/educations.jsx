@@ -75,7 +75,7 @@ export function EducationSection() {
       {/* Floating code blocks - shorter version for education section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute lg:top-20 sm:top-10 md:top-30 left-4 sm:left-10 md:left-2 lg:left-40 transform -rotate-12 max-w-[160px] sm:max-w-none">
-          <pre className="bg-black/5 p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
+          <pre className="p-2 sm:p-3 md:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
             {`function learn(subject) {
   knowledge++;
   return growth;

@@ -50,15 +50,15 @@ export function AboutSection() {
       {/* Floating code blocks - subtle version for about section */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-20 lg:left-20 md:left-10 transform -rotate-6 hidden sm:block">
-          <pre className="bg-black/5 p-2 md:p-3 rounded-lg font-mono text-[8px] xs:text-[10px] sm:text-xs md:text-sm">
+          <pre className="p-2 md:p-3 rounded-lg font-mono text-[8px] xs:text-[10px] sm:text-xs md:text-sm">
             {`const person = {
   passion: 'technology',
   goal: 'grow and learn'
 }`}
           </pre>
         </div>
-        <div className="absolute bottom-10 right-5 transform rotate-6 hidden sm:block">
-          <pre className="bg-black/5 p-3 rounded-lg font-mono text-sm">
+        <div className="absolute bottom-10 right-5 transform rotate-6 hidden lg:block">
+          <pre className="p-3 rounded-lg font-mono text-sm">
             {`if (challenge) {
   findSolution();
 }`}
@@ -152,8 +152,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-
-      {/* Animated background elements - matching hero section */}
     </section>
   );
 }

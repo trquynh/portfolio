@@ -109,7 +109,9 @@ export function Footer() {
               Laden Sie meinen vollständigen Lebenslauf im PDF-Format herunter.
             </p>
             <a
-              href="#"
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors"
             >
               <span>CV Download</span>

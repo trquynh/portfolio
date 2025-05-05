@@ -90,15 +90,15 @@ export function HeroSection() {
 
       {/* Floating code blocks in background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-40 left-20 opacity-25 transform -rotate-12 hidden sm:block">
-          <pre className="bg-black/5 p-4 rounded-lg font-mono text-sm">
+        <div className="absolute top-40 left-20 opacity-25 transform -rotate-12 hidden lg:block">
+          <pre className="p-4 rounded-lg font-mono text-sm">
             {`function mission() {
   return 'Grow, build, and make a difference';
   }`}
           </pre>
         </div>
         <div className="absolute bottom-10 sm:bottom-20 right-2 sm:right-10 opacity-20 transform -rotate-6 max-w-[140px] sm:max-w-none">
-          <pre className="bg-black/5 p-2 sm:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
+          <pre className="p-2 sm:p-4 rounded-lg font-mono text-[10px] xs:text-[10px] sm:text-xs md:text-sm">
             {`const dream = true;
 while(dream) {
   code();
