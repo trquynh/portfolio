@@ -23,7 +23,6 @@ export function SkillsSection() {
       skills: [
         { name: "JavaScript", level: 85 },
         { name: "Python", level: 80 },
-        { name: "Java", level: 75 },
         { name: "C++", level: 70 },
         { name: "Dart", level: 65 },
       ],
